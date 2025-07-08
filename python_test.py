@@ -1,8 +1,6 @@
-# Simple test without subprocess - just creates test files
 import os
 
 def create_test_files():
-    """Create input and expected output files for testing"""
 
     # Test cases
     tests = [
@@ -18,13 +16,11 @@ def create_test_files():
         ("3.5 + 2.5", "6")
     ]
 
-    # Create input file
     with open("test_input.txt", "w") as f:
         for test_expr, _ in tests:
             f.write(test_expr + "\n")
         f.write("quit\n")
 
-    # Create expected results file
     with open("expected_output.txt", "w") as f:
         f.write("Expected Results:\n")
         f.write("================\n")
